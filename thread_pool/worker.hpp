@@ -4,6 +4,7 @@
 #include <functional>
 #include <list>
 #include <mutex>
+#include <atomic>
 #include <thread>
 
 #include "event.hpp"
