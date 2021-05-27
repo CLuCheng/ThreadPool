@@ -15,5 +15,5 @@ the calling thread need to waits for the worker thread.
 the calling thread does not need to wait for the worker thread.
 
 	  worker.async_call([]{
-	    do_sometion();
+	    do_something();
 	  });
