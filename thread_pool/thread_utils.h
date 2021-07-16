@@ -1,7 +1,7 @@
 #include <string>
 #ifdef _WIN32
 #include <Windows.h>
-#else
+#elif _LINUX
 #include <pthread.h>
 #include <sys/prctl.h>
 #endif
