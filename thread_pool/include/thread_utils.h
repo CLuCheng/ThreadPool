@@ -1,3 +1,4 @@
 #include <string>
+#include "thread_pool_export.h"
 
-void setThreadName(const std::string& name);
+DLL_EXPORT void setThreadName(const std::string& name);

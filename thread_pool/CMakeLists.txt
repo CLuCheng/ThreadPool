@@ -10,18 +10,24 @@ if(NOT CMAKE_CXX_STANDARD)
 endif()
 
 
-set(SRC_LIST  "include/thread_pool.h" "include/worker.hpp" "include/event.hpp" "include/thread_utils.h" "thread_utils.cpp")
+set(SRC_LIST  "include/thread_pool_export.h"  
+	"include/thread_pool.h" 
+	"include/worker.hpp" 
+	"include/event.hpp"
+	"include/thread_utils.h" 
+	"thread_utils.cpp")
 
 # Add source to this project's executable.
 if(USE_DYNAMIC)
     add_library(thread_pool SHARED ${SRC_LIST})
+    target_compile_definitions(thread_pool PRIVATE -DEXPORT_DLL_SYM)
 else()
     add_library(thread_pool STATIC ${SRC_LIST})
 endif()
 
 target_include_directories(
         thread_pool PRIVATE
-        ${CMAKE_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/include
 )
 
 # TODO: Add tests and install targets if needed.

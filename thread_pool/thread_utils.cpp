@@ -7,7 +7,7 @@
 #include <sys/prctl.h>
 #endif
 
-void setThreadName(const std::string& name)
+DLL_EXPORT void setThreadName(const std::string& name)
 {
 #if defined(__APPLE__)
   pthread_setname_np(name.c_str());
