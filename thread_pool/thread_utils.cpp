@@ -1,5 +1,11 @@
-#include "thread_utils.h"
-
+#include "include/thread_utils.h"
+#ifdef _WIN32
+#include <Windows.h>
+#elif defined(__APPLE__)
+#include <pthread.h>
+#else
+#include <sys/prctl.h>
+#endif
 
 void setThreadName(const std::string& name)
 {
