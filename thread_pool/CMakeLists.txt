@@ -25,8 +25,10 @@ else()
     add_library(thread_pool STATIC ${SRC_LIST})
 endif()
 
+add_library(thread_pool::core ALIAS thread_pool)
+
 target_include_directories(
-        thread_pool PRIVATE
+        thread_pool PUBLIC
         ${PROJECT_SOURCE_DIR}/include
 )
 

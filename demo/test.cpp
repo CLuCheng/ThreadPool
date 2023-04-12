@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-#include "../thread_pool/include/thread_pool.h"
-#include "../thread_pool/include/worker.hpp"
+#include "thread_pool.h"
+#include "worker.hpp"
 using namespace std;
 
 void test1() {
