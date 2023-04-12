@@ -3,14 +3,14 @@
 	#ifdef _WIN32
 	#define DLL_EXPORT extern"C" _declspec(dllexport)
 	#else
-#define DLL_EXPORT extern"C" __attribute__((visibility("hidden")))
+#define DLL_EXPORT extern"C" __attribute__((visibility("default")))
 	#endif 
 #else
 
 #ifdef _WIN32
 	#define DLL_EXPORT extern"C" _declspec(dllimport)
 #else
-	#define DLL_EXPORT extern"C" __attribute__((visibility("default")))
+	#define DLL_EXPORT extern"C" __attribute__((visibility("hidden")))
 	#endif
 #endif
 
