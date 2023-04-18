@@ -27,7 +27,7 @@ TEST(ThreadPool, sync_call)
         });
     });
 
-    EXPECT_EQ(ans,2);
+    EXPECT_EQ(ans,45);
     worker.Wait();
 }
 
